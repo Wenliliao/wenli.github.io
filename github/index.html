@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liao's page :</title>
+    <script>
+        $(document).ready(function(){
+            $("#well").hide();
+            $("#open").click(function(){
+                $("#well").fadeToggle("slow");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <img src="C:\Users\廖文豊\OneDrive\文件\Guthub Pages\96707717_p0_master1200.jpg" id="bg-img" style="width: auto;
+    height: 100%; margin-left: -1163.44px; margin-top: -655.5px;">
+    <style>
+        #bg-img{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            z-index: -99;
+        }
+    </style>
+    <script>
+        $(function(){
+
+            resize_tab();
+        });
+
+        $(window).resize(function(){
+            resize_tab;
+        }).resize();
+
+        function resize_tab(){
+            var viewportWidth = $(window).innerWidth();
+            var viewportHeight = $(window).innerHeight();
+
+            var width = $('#bg-img').width();
+            var height = $('#bg-img').height();
+
+
+            if((viewportWidth / viewportHeight) > (width / height)) {
+
+                $('#bg-img').css({
+                    'width': '100%',
+                    'height': 'auto',
+                    'marggin-left': 0 - width / 2,
+                    'margin-top': 0 - height / 2
+                });
+
+            }else{
+                $('#bg-img').css({
+                    'width': 'auto',
+                    'height': '100%',
+                    'marggin-left': 0 - width / 2,
+                    'margin-top': 0 - height / 2
+                });
+            }
+        }
+    </script>
+    <center>
+        <div class="container">
+            <div class="row">
+                <div class="one-half column" style="margin-top: 25%">
+                    <br>
+                    <center>
+                        <b>
+                            <font color="white">
+                                <h1>自我介紹</h1>
+                                <h3>喜歡在家裡看書打電動</h3>
+                            </font>
+                        </b>
+                    </center>
+                    <div id="open">
+                        <button class="btn-info btn-block btn">簡介</button>
+                    </div>
+                            <center>
+                                <br>
+                                <font color="white">
+                                    <h3>醫資二</h3>
+                                    <h2>廖文豊</h2>
+                                   <p>
+                                    "Facebook : "
+                                    <a href="https://www.facebook.com/profile.php?id=100009597401107">willis</a>
+                                    </p>
+                                </font>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </center>      
+</body>
+</html>
